@@ -1,0 +1,228 @@
+{
+  "common": {
+    "home": "Home",
+    "about": "About Us",
+    "programs": "Programs",
+    "activities": "Activities",
+    "news": "News",
+    "gallery": "Gallery",
+    "volunteer": "Volunteer",
+    "contact": "Contact",
+    "donate": "Donate",
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "backToList": "Back to List",
+    "noItems": "No items available at this time",
+    "loading": "Loading...",
+    "gallery_title": "Photo Gallery",
+    "lang": "العربية"
+  },
+  "home": {
+    "hero": {
+      "title": "Our Children Association",
+      "subtitle": "for Persons with Disabilities",
+      "tagline": "We believe in every person's right to a dignified life and equal opportunities",
+      "cta_donate": "Donate Now",
+      "cta_learn": "Learn About Us",
+      "established": "Established 2016"
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To empower persons with disabilities and their families through comprehensive quality programs, enhance their capabilities, advocate for their rights, and provide a safe and motivating environment that ensures equal opportunities for growth and development."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "An inclusive and just society where persons with disabilities enjoy their full rights and participate actively and independently in all aspects of life."
+    },
+    "stats": {
+      "title": "Our Impact in Numbers",
+      "families": "Families Supported",
+      "sessions": "Rehabilitation Sessions",
+      "tools": "Assistive Devices Distributed",
+      "activities": "Community Activities",
+      "partners": "Institutional Partners",
+      "cases": "Registered Cases",
+      "homes": "Homes Modified"
+    },
+    "programs": {
+      "title": "Our Programs & Services",
+      "subtitle": "Comprehensive services supporting persons with disabilities and their families",
+      "viewAll": "All Programs"
+    },
+    "activities": {
+      "title": "Latest Activities",
+      "subtitle": "Events and initiatives promoting community inclusion",
+      "viewAll": "All Activities"
+    },
+    "news": {
+      "title": "Latest News",
+      "subtitle": "Stay updated with our latest news and developments",
+      "viewAll": "All News"
+    },
+    "values": {
+      "title": "Our Values",
+      "dignity": "Human Dignity First",
+      "justice": "Justice and Equality",
+      "transparency": "Transparency and Accountability",
+      "partnership": "Community Partnership",
+      "giving": "Spirit of Giving and Belonging"
+    },
+    "cta": {
+      "title": "Make a Difference",
+      "subtitle": "Your donation creates real change in hundreds of families' lives",
+      "donate": "Donate Now",
+      "volunteer": "Volunteer With Us"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "hero_subtitle": "A licensed non-profit association serving persons with disabilities since 2016",
+    "overview": "Our Children Association for Persons with Disabilities is a licensed charitable organization founded to serve persons with disabilities and their families, believing in their full right to a dignified life, education, care, and community integration. We work as a team with community partnership to be a true support for every family.",
+    "objectives_title": "Our Objectives",
+    "objectives": [
+      "Creating an entity and reference for persons with disabilities",
+      "Advocating for the marginalized rights of persons with disabilities",
+      "Seeking to integrate persons with disabilities into all community activities",
+      "Providing families with assistive devices and medical supplies",
+      "Providing employment opportunities for qualified cases",
+      "Developing persons with disabilities in all economic and social aspects",
+      "Integrating persons with disabilities in educational institutions",
+      "Breaking barriers to make society more inclusive and accessible"
+    ],
+    "achievements_title": "Our Achievements",
+    "achievements": [
+      { "number": "200+", "label": "Families received food packages and clothing vouchers" },
+      { "number": "150", "label": "Rehabilitation and educational sessions for children and youth" },
+      { "number": "300", "label": "Assistive devices and medical supplies distributed" },
+      { "number": "20+", "label": "Community awareness activities organized" },
+      { "number": "15", "label": "Partnerships with local and international institutions" },
+      { "number": "10", "label": "Homes modified for persons with disabilities" }
+    ],
+    "future_title": "Future Plans",
+    "future": [
+      "Finding a new headquarters that meets future needs of persons with disabilities",
+      "Pressuring authorities to fully implement the disability law",
+      "Achieving minimum 5% employment of persons with disabilities in public and private institutions",
+      "Strengthening local and international partnerships to expand services"
+    ]
+  },
+  "programs": {
+    "title": "Programs & Services",
+    "subtitle": "Comprehensive programs supporting persons with disabilities and their families",
+    "noItems": "No programs published at this time",
+    "backToList": "Back to Programs",
+    "gallery": "Photo Gallery",
+    "static": [
+      {
+        "id": "speech",
+        "icon": "🗣️",
+        "title": "Speech & Communication Program",
+        "description": "Teaching and supporting speech for children under the supervision of a specialized speech therapist, with intensive communication programs for all cases."
+      },
+      {
+        "id": "special-education",
+        "icon": "📚",
+        "title": "Special Education",
+        "description": "Specialized educational programs designed to meet the individual needs of each student with disabilities."
+      },
+      {
+        "id": "learning-difficulties",
+        "icon": "🎯",
+        "title": "Learning Difficulties Program",
+        "description": "Early diagnosis and intervention to help children with learning difficulties reach their full potential."
+      },
+      {
+        "id": "community-inclusion",
+        "icon": "🤝",
+        "title": "Community Inclusion",
+        "description": "Various activities to integrate persons with disabilities into society, including summer and winter clubs and recreational events."
+      },
+      {
+        "id": "physical-rehabilitation",
+        "icon": "🦽",
+        "title": "Physical Rehabilitation",
+        "description": "Helping and rehabilitating persons with physical disabilities to move easily and improve their independence."
+      },
+      {
+        "id": "parent-awareness",
+        "icon": "👨‍👩‍👧",
+        "title": "Parent Awareness Program",
+        "description": "Awareness programs for parents on how to deal with cases and complete the treatment cycle through communication with supervisors."
+      }
+    ]
+  },
+  "activities": {
+    "title": "Activities & Events",
+    "subtitle": "Our collective activities promoting inclusion and development",
+    "noItems": "No activities published at this time",
+    "backToList": "Back to Activities",
+    "gallery": "Photo Gallery"
+  },
+  "news": {
+    "title": "News & Updates",
+    "subtitle": "Stay updated with our latest news and activities",
+    "noItems": "No news published at this time",
+    "backToList": "Back to News",
+    "gallery": "Photo Gallery"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We're here to answer your inquiries",
+    "address_title": "Address",
+    "address": "Palestine - Nablus - Askar Old Camp Services Building - 2nd Floor",
+    "phone_title": "Phone",
+    "phone": "0597 550 083",
+    "email_title": "Email",
+    "email": "aspn.association@gmail.com",
+    "hours_title": "Working Hours",
+    "hours": "Sunday - Thursday: 8:00 AM - 4:00 PM"
+  },
+  "donate": {
+    "title": "Donate & Support Our Mission",
+    "subtitle": "Your donation changes a whole family's life",
+    "impact_title": "Your Donation Impact",
+    "impact_1": "100 NIS provides an assistive device to a person in need",
+    "impact_2": "250 NIS funds 10 therapy sessions for a child",
+    "impact_3": "500 NIS provides a food package for a needy family for a full month",
+    "bank_title": "Bank Transfer Information",
+    "bank_name": "Bank of Palestine (BOP)",
+    "account_name": "Association of Special Needs Parents - Our Children",
+    "account_number_label": "Account Number",
+    "account_number": "220177",
+    "iban_label": "IBAN",
+    "iban": "PS37PINV089802201770030038000",
+    "swift_label": "SWIFT/BIC",
+    "swift": "PINVPS22",
+    "currency_label": "Currency",
+    "currency": "New Israeli Shekel (NIS)",
+    "note": "Please include your name when transferring. We will contact you to confirm receipt."
+  },
+  "volunteer": {
+    "title": "Volunteer With Us",
+    "subtitle": "Join the change team and be part of our journey of hope",
+    "why_title": "Why Volunteer With Us?",
+    "why_1": "Make a real difference in the lives of persons with disabilities",
+    "why_2": "Gain valuable hands-on experience in social work",
+    "why_3": "Be part of a cohesive and caring community",
+    "why_4": "Develop your leadership and collaboration skills",
+    "contact_us": "Contact Us",
+    "call": "Call Us"
+  },
+  "gallery": {
+    "title": "Photo Gallery",
+    "subtitle": "Moments from our journey toward a more inclusive society"
+  },
+  "footer": {
+    "description": "A licensed Palestinian non-governmental organization working to support persons with disabilities and their families in Nablus, Palestine.",
+    "rights": "All Rights Reserved",
+    "quick_links": "Quick Links",
+    "contact_info": "Contact Information",
+    "org_name": "Our Children Association for Persons with Disabilities"
+  },
+  "not_found": {
+    "title": "Page Not Found",
+    "description": "Sorry, the page you are looking for does not exist.",
+    "back_home": "Back to Home"
+  }
+}
