@@ -24,10 +24,10 @@ export default function Footer({ locale, t }: FooterProps) {
   return (
     <footer className="bg-primary-900 text-white">
       {/* Wave divider */}
-      <div className="bg-gray-50">
+      <div className="bg-primary-900 -mb-1">
         <svg
           viewBox="0 0 1440 80"
-          className="w-full -mb-1"
+          className="w-full block"
           preserveAspectRatio="none"
         >
           <path

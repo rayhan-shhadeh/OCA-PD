@@ -128,7 +128,7 @@ export default async function HomePage({
         {/* Wave bottom */}
         <div className="absolute bottom-0 left-0 right-0">
           <svg
-            viewBox="0 0 1440 80"
+            viewBox="0 0 1440 30"
             className="w-full"
             preserveAspectRatio="none"
           >
