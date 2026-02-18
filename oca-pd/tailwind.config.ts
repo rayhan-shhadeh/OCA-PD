@@ -8,32 +8,33 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        primary: {
-          50: "#eff6ff",
-          100: "#dbeafe",
-          200: "#bfdbfe",
-          300: "#93c5fd",
-          400: "#60a5fa",
-          500: "#1d6fba",
-          600: "#1a5fa3",
-          700: "#1e4d8c",
-          800: "#1e3a6e",
-          900: "#1e2d50",
-        },
-        secondary: {
-          50: "#f0f9ff",
-          100: "#e0f2fe",
-          200: "#bae6fd",
-          300: "#7dd3fc",
-          400: "#38bdf8",
-          500: "#5bb8e8",
-          600: "#0284c7",
-          700: "#0369a1",
-          800: "#075985",
-          900: "#0c4a6e",
-        },
-      },
+   // tailwind.config.ts — replace the entire colors block inside extend: {}
+colors: {
+  primary: {
+    50:  "#f5f3ff",
+    100: "#ede9fe",
+    200: "#ddd6fe",
+    300: "#c4b5fd",
+    400: "#a78bfa",
+    500: "#7c3aed",   // Main brand purple (matches wheelchair figure)
+    600: "#6d28d9",
+    700: "#5b21b6",
+    800: "#4c1d95",
+    900: "#2e1065",
+  },
+  secondary: {
+    50:  "#fffbeb",
+    100: "#fef3c7",
+    200: "#fde68a",
+    300: "#fcd34d",
+    400: "#fbbf24",
+    500: "#d97706",   // Gold (matches central figure)
+    600: "#b45309",
+    700: "#92400e",
+    800: "#78350f",
+    900: "#451a03",
+  },
+},
       fontFamily: {
         arabic: ["var(--font-arabic)", "Tahoma", "Arial", "sans-serif"],
       },

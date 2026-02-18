@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { usePathname } from 'next/navigation';
-import type { Locale } from '@/types/content';
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import type { Locale } from "@/types/content";
 
 interface HeaderProps {
   locale: Locale;
@@ -16,13 +16,13 @@ export default function Header({ locale, t }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
-  const altLocale = locale === 'ar' ? 'en' : 'ar';
+  const altLocale = locale === "ar" ? "en" : "ar";
   const altPath = pathname.replace(`/${locale}`, `/${altLocale}`);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks = [
@@ -37,19 +37,24 @@ export default function Header({ locale, t }: HeaderProps) {
   ];
 
   const isActive = (href: string) => {
-    if (href === `/${locale}`) return pathname === `/${locale}` || pathname === `/${locale}/`;
+    if (href === `/${locale}`)
+      return pathname === `/${locale}` || pathname === `/${locale}/`;
     return pathname.startsWith(href);
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white shadow-lg py-2' : 'bg-white/95 backdrop-blur-sm py-3'
-    }`}>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-white shadow-lg py-2"
+          : "bg-white/95 backdrop-blur-sm py-3"
+      }`}
+    >
       <div className="container-custom">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center gap-3 group">
-            <div className="relative w-14 h-14 flex-shrink-0">
+            <div className="relative w-14 h-14 flex-shrink-0 rounded-full overflow-hidden">
               <Image
                 src="/logo.png"
                 alt="OCA-PD Logo"
@@ -59,8 +64,12 @@ export default function Header({ locale, t }: HeaderProps) {
               />
             </div>
             <div className="hidden sm:block">
-              <p className={`font-bold text-sm leading-tight ${locale === 'ar' ? 'text-right' : 'text-left'} text-primary-700`}>
-                {locale === 'ar' ? 'جمعية أهالي ذوي الاحتياجات الخاصة' : 'Our Children Association'}
+              <p
+                className={`font-bold text-sm leading-tight ${locale === "ar" ? "text-right" : "text-left"} text-primary-700`}
+              >
+                {locale === "ar"
+                  ? "جمعية أهالي ذوي الاحتياجات الخاصة"
+                  : "Our Children Association"}
               </p>
               <p className="text-primary-500 text-xs font-semibold">OCA-PD</p>
             </div>
@@ -74,8 +83,8 @@ export default function Header({ locale, t }: HeaderProps) {
                 href={link.href}
                 className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   isActive(link.href)
-                    ? 'bg-primary-500 text-white'
-                    : 'text-gray-700 hover:bg-primary-50 hover:text-primary-600'
+                    ? "bg-primary-500 text-white"
+                    : "text-gray-700 hover:bg-primary-50 hover:text-primary-600"
                 }`}
               >
                 {link.label}
@@ -110,12 +119,32 @@ export default function Header({ locale, t }: HeaderProps) {
               aria-label="Toggle menu"
             >
               {isOpen ? (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               ) : (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
                 </svg>
               )}
             </button>
@@ -133,8 +162,8 @@ export default function Header({ locale, t }: HeaderProps) {
                   onClick={() => setIsOpen(false)}
                   className={`px-4 py-2.5 rounded-lg text-sm font-medium transition-colors ${
                     isActive(link.href)
-                      ? 'bg-primary-500 text-white'
-                      : 'text-gray-700 hover:bg-primary-50'
+                      ? "bg-primary-500 text-white"
+                      : "text-gray-700 hover:bg-primary-50"
                   }`}
                 >
                   {link.label}

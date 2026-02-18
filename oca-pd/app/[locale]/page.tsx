@@ -1,28 +1,32 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import ContentCard from '@/components/ContentCard';
-import { getItems } from '@/lib/notion';
-import { getTranslations } from '@/lib/i18n';
-import type { Locale } from '@/types/content';
+import Link from "next/link";
+import Image from "next/image";
+import ContentCard from "@/components/ContentCard";
+import { getItems } from "@/lib/notion";
+import { getTranslations } from "@/lib/i18n";
+import type { Locale } from "@/types/content";
 
 export const revalidate = 3600;
 
 const stats = [
-  { key: 'families', value: '200+', icon: '👨‍👩‍👧' },
-  { key: 'sessions', value: '150+', icon: '🎓' },
-  { key: 'tools', value: '300+', icon: '🦽' },
-  { key: 'activities', value: '20+', icon: '🎯' },
-  { key: 'partners', value: '15', icon: '🤝' },
-  { key: 'cases', value: '170+', icon: '❤️' },
+  { key: "families", value: "200+", icon: "👨‍👩‍👧" },
+  { key: "sessions", value: "150+", icon: "🎓" },
+  { key: "tools", value: "300+", icon: "🦽" },
+  { key: "activities", value: "20+", icon: "🎯" },
+  { key: "partners", value: "15", icon: "🤝" },
+  { key: "cases", value: "170+", icon: "❤️" },
 ];
 
-export default async function HomePage({ params }: { params: { locale: string } }) {
+export default async function HomePage({
+  params,
+}: {
+  params: { locale: string };
+}) {
   const locale = params.locale as Locale;
   const t = await getTranslations(locale);
 
   const [activities, news] = await Promise.all([
-    getItems(process.env.NOTION_ACTIVITIES_DB_ID, locale, 'activity'),
-    getItems(process.env.NOTION_NEWS_DB_ID, locale, 'news'),
+    getItems(process.env.NOTION_ACTIVITIES_DB_ID, locale, "activity"),
+    getItems(process.env.NOTION_NEWS_DB_ID, locale, "news"),
   ]);
 
   const staticPrograms = t.programs.static;
@@ -37,8 +41,14 @@ export default async function HomePage({ params }: { params: { locale: string } 
           <div className="absolute bottom-20 -left-20 w-80 h-80 bg-primary-500/30 rounded-full blur-3xl" />
           <div className="absolute top-1/2 right-1/3 w-60 h-60 bg-white/5 rounded-full blur-2xl" />
           {/* Pattern overlay */}
-          <div className="absolute inset-0 opacity-5"
-            style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+          <div
+            className="absolute inset-0 opacity-5"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle, white 1px, transparent 1px)",
+              backgroundSize: "40px 40px",
+            }}
+          />
         </div>
 
         <div className="container-custom relative z-10 py-20">
@@ -79,7 +89,13 @@ export default async function HomePage({ params }: { params: { locale: string } 
               <div className="relative">
                 <div className="w-72 h-72 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20 shadow-2xl">
                   <div className="w-56 h-56 relative">
-                    <Image src="/logo.png" alt="OCA-PD" fill className="object-contain drop-shadow-2xl" priority />
+                    <Image
+                      src="/logo.png"
+                      alt="OCA-PD"
+                      fill
+                      className=" drop-shadow-2xl relative w-14 h-19 flex-shrink-0 rounded-full overflow-hidden"
+                      priority
+                    />
                   </div>
                 </div>
                 {/* Orbiting elements */}
@@ -98,8 +114,12 @@ export default async function HomePage({ params }: { params: { locale: string } 
             {stats.map((stat) => (
               <div key={stat.key} className="text-center glass rounded-xl p-4">
                 <div className="text-2xl mb-1">{stat.icon}</div>
-                <div className="text-white font-black text-xl">{stat.value}</div>
-                <div className="text-primary-200 text-xs mt-0.5">{t.home.stats[stat.key as keyof typeof t.home.stats]}</div>
+                <div className="text-white font-black text-xl">
+                  {stat.value}
+                </div>
+                <div className="text-primary-200 text-xs mt-0.5">
+                  {t.home.stats[stat.key as keyof typeof t.home.stats]}
+                </div>
               </div>
             ))}
           </div>
@@ -107,8 +127,15 @@ export default async function HomePage({ params }: { params: { locale: string } 
 
         {/* Wave bottom */}
         <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 80" className="w-full" preserveAspectRatio="none">
-            <path fill="#f9fafb" d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" />
+          <svg
+            viewBox="0 0 1440 80"
+            className="w-full"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="#f9fafb"
+              d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z"
+            />
           </svg>
         </div>
       </section>
@@ -121,15 +148,23 @@ export default async function HomePage({ params }: { params: { locale: string } 
               <div className="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-5">
                 <span className="text-2xl">🎯</span>
               </div>
-              <h3 className="text-2xl font-black text-primary-800 mb-4">{t.home.mission.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{t.home.mission.description}</p>
+              <h3 className="text-2xl font-black text-primary-800 mb-4">
+                {t.home.mission.title}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {t.home.mission.description}
+              </p>
             </div>
             <div className="bg-gradient-to-br from-primary-600 to-primary-800 rounded-2xl p-8 text-white shadow-lg">
               <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-5">
                 <span className="text-2xl">🌟</span>
               </div>
-              <h3 className="text-2xl font-black mb-4">{t.home.vision.title}</h3>
-              <p className="text-primary-100 leading-relaxed">{t.home.vision.description}</p>
+              <h3 className="text-2xl font-black mb-4">
+                {t.home.vision.title}
+              </h3>
+              <p className="text-primary-100 leading-relaxed">
+                {t.home.vision.description}
+              </p>
             </div>
           </div>
         </div>
@@ -139,16 +174,27 @@ export default async function HomePage({ params }: { params: { locale: string } 
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-black text-gray-800 mb-4">{t.home.programs.title}</h2>
-            <p className="text-gray-500 max-w-2xl mx-auto">{t.home.programs.subtitle}</p>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-800 mb-4">
+              {t.home.programs.title}
+            </h2>
+            <p className="text-gray-500 max-w-2xl mx-auto">
+              {t.home.programs.subtitle}
+            </p>
             <div className="w-16 h-1 bg-primary-500 mx-auto mt-4 rounded-full" />
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {staticPrograms.slice(0, 6).map((program: any, index: number) => (
-              <div key={program.id} className="card-hover bg-gray-50 rounded-2xl p-6 border border-gray-100">
+              <div
+                key={program.id}
+                className="card-hover bg-gray-50 rounded-2xl p-6 border border-gray-100"
+              >
                 <div className="text-4xl mb-4">{program.icon}</div>
-                <h3 className="font-bold text-lg text-gray-800 mb-2">{program.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{program.description}</p>
+                <h3 className="font-bold text-lg text-gray-800 mb-2">
+                  {program.title}
+                </h3>
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  {program.description}
+                </p>
               </div>
             ))}
           </div>
@@ -158,8 +204,18 @@ export default async function HomePage({ params }: { params: { locale: string } 
               className="inline-flex items-center gap-2 bg-primary-500 text-white px-8 py-3 rounded-full font-bold hover:bg-primary-600 transition-colors shadow-md"
             >
               {t.home.programs.viewAll}
-              <svg className="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <svg
+                className="w-4 h-4 rtl-flip"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
               </svg>
             </Link>
           </div>
@@ -171,7 +227,9 @@ export default async function HomePage({ params }: { params: { locale: string } 
         <div className="container-custom">
           <div className="flex items-end justify-between mb-10">
             <div>
-              <h2 className="text-3xl md:text-4xl font-black text-gray-800 mb-2">{t.home.activities.title}</h2>
+              <h2 className="text-3xl md:text-4xl font-black text-gray-800 mb-2">
+                {t.home.activities.title}
+              </h2>
               <p className="text-gray-500">{t.home.activities.subtitle}</p>
               <div className="w-16 h-1 bg-primary-500 mt-3 rounded-full" />
             </div>
@@ -180,8 +238,18 @@ export default async function HomePage({ params }: { params: { locale: string } 
               className="hidden sm:flex items-center gap-1 text-primary-600 font-semibold hover:underline text-sm"
             >
               {t.home.activities.viewAll}
-              <svg className="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <svg
+                className="w-4 h-4 rtl-flip"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
               </svg>
             </Link>
           </div>
@@ -189,18 +257,29 @@ export default async function HomePage({ params }: { params: { locale: string } 
           {activities.length > 0 ? (
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {activities.slice(0, 6).map((item) => (
-                <ContentCard key={item.id} item={item} locale={locale} section="activities" t={t} />
+                <ContentCard
+                  key={item.id}
+                  item={item}
+                  locale={locale}
+                  section="activities"
+                  t={t}
+                />
               ))}
             </div>
           ) : (
             <div className="text-center py-16 bg-white rounded-2xl border border-dashed border-gray-200">
               <div className="text-5xl mb-4">🎯</div>
-              <p className="text-gray-400 font-medium">{t.activities.noItems}</p>
+              <p className="text-gray-400 font-medium">
+                {t.activities.noItems}
+              </p>
             </div>
           )}
 
           <div className="text-center mt-6 sm:hidden">
-            <Link href={`/${locale}/activities`} className="text-primary-600 font-semibold">
+            <Link
+              href={`/${locale}/activities`}
+              className="text-primary-600 font-semibold"
+            >
               {t.home.activities.viewAll} →
             </Link>
           </div>
@@ -212,7 +291,9 @@ export default async function HomePage({ params }: { params: { locale: string } 
         <div className="container-custom">
           <div className="flex items-end justify-between mb-10">
             <div>
-              <h2 className="text-3xl md:text-4xl font-black text-gray-800 mb-2">{t.home.news.title}</h2>
+              <h2 className="text-3xl md:text-4xl font-black text-gray-800 mb-2">
+                {t.home.news.title}
+              </h2>
               <p className="text-gray-500">{t.home.news.subtitle}</p>
               <div className="w-16 h-1 bg-primary-500 mt-3 rounded-full" />
             </div>
@@ -221,8 +302,18 @@ export default async function HomePage({ params }: { params: { locale: string } 
               className="hidden sm:flex items-center gap-1 text-primary-600 font-semibold hover:underline text-sm"
             >
               {t.home.news.viewAll}
-              <svg className="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <svg
+                className="w-4 h-4 rtl-flip"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
               </svg>
             </Link>
           </div>
@@ -230,7 +321,13 @@ export default async function HomePage({ params }: { params: { locale: string } 
           {news.length > 0 ? (
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {news.slice(0, 6).map((item) => (
-                <ContentCard key={item.id} item={item} locale={locale} section="news" t={t} />
+                <ContentCard
+                  key={item.id}
+                  item={item}
+                  locale={locale}
+                  section="news"
+                  t={t}
+                />
               ))}
             </div>
           ) : (
@@ -244,24 +341,34 @@ export default async function HomePage({ params }: { params: { locale: string } 
 
       {/* Values Section */}
       <section className="section-padding bg-gradient-to-br from-primary-800 to-primary-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5"
-          style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
+        <div
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle, white 1px, transparent 1px)",
+            backgroundSize: "30px 30px",
+          }}
+        />
         <div className="container-custom relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-black mb-3">{t.home.values.title}</h2>
+            <h2 className="text-3xl md:text-4xl font-black mb-3">
+              {t.home.values.title}
+            </h2>
             <div className="w-16 h-1 bg-secondary-400 mx-auto rounded-full" />
           </div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {[
-              { key: 'dignity', icon: '🕊️' },
-              { key: 'justice', icon: '⚖️' },
-              { key: 'transparency', icon: '🔍' },
-              { key: 'partnership', icon: '🤝' },
-              { key: 'giving', icon: '💝' },
+              { key: "dignity", icon: "🕊️" },
+              { key: "justice", icon: "⚖️" },
+              { key: "transparency", icon: "🔍" },
+              { key: "partnership", icon: "🤝" },
+              { key: "giving", icon: "💝" },
             ].map((value) => (
               <div key={value.key} className="text-center glass rounded-xl p-6">
                 <div className="text-4xl mb-3">{value.icon}</div>
-                <p className="text-white font-semibold text-sm">{t.home.values[value.key as keyof typeof t.home.values]}</p>
+                <p className="text-white font-semibold text-sm">
+                  {t.home.values[value.key as keyof typeof t.home.values]}
+                </p>
               </div>
             ))}
           </div>
@@ -271,8 +378,12 @@ export default async function HomePage({ params }: { params: { locale: string } 
       {/* CTA Section */}
       <section className="section-padding bg-secondary-50 border-t border-secondary-100">
         <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-black text-primary-800 mb-4">{t.home.cta.title}</h2>
-          <p className="text-gray-500 text-lg mb-8 max-w-xl mx-auto">{t.home.cta.subtitle}</p>
+          <h2 className="text-3xl md:text-4xl font-black text-primary-800 mb-4">
+            {t.home.cta.title}
+          </h2>
+          <p className="text-gray-500 text-lg mb-8 max-w-xl mx-auto">
+            {t.home.cta.subtitle}
+          </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
               href={`/${locale}/donate`}
