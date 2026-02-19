@@ -150,7 +150,7 @@ export default function Footer({ locale, t }: FooterProps) {
                     ? "بنك الاستثمار الفلسطيني"
                     : "Palestine Investment Bank"}
                 </p>
-                <p>IBAN: PS37PINV089802201770030038000</p>
+                <p>IBAN: PS37PINV089802201770020038000</p>
                 <p>SWIFT: PINVPS22</p>
               </div>
             </div>
