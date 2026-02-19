@@ -146,7 +146,9 @@ export default function Footer({ locale, t }: FooterProps) {
               </Link>
               <div className="bg-primary-800 rounded-xl p-4 text-xs text-primary-200 space-y-1">
                 <p className="font-semibold text-white text-sm">
-                  {locale === "ar" ? "بنك فلسطين" : "Bank of Palestine"}
+                  {locale === "ar"
+                    ? "بنك الاستثمار الفلسطيني"
+                    : "Palestine Investment Bank"}
                 </p>
                 <p>IBAN: PS37PINV089802201770030038000</p>
                 <p>SWIFT: PINVPS22</p>
