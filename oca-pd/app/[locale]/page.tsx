@@ -55,7 +55,10 @@ export default async function HomePage({
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Text content */}
             <div className="text-white animate-fadeIn">
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-secondary-200 text-sm font-medium mb-6 border border-white/20">
+              <div
+                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-secondary-200 text-sm font-medium mb-6 border border-white/20"
+                style={{ marginTop: 10 }}
+              >
                 <span>🕊️</span>
                 <span>{t.home.hero.established}</span>
               </div>
@@ -110,7 +113,10 @@ export default async function HomePage({
           </div>
 
           {/* Stats bar */}
-          <div className="mt-16 grid grid-cols-3 md:grid-cols-6 gap-4 animate-slideUp delay-300">
+          <div
+            className="mt-16 grid grid-cols-3 md:grid-cols-6 gap-4 animate-slideUp delay-300"
+            style={{ marginBottom: 10 }}
+          >
             {stats.map((stat) => (
               <div key={stat.key} className="text-center glass rounded-xl p-4">
                 <div className="text-2xl mb-1">{stat.icon}</div>
