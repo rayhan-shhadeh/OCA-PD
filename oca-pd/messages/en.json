@@ -92,12 +92,30 @@
     ],
     "achievements_title": "Our Achievements",
     "achievements": [
-      { "number": "200+", "label": "Families received food packages and clothing vouchers" },
-      { "number": "150", "label": "Rehabilitation and educational sessions for children and youth" },
-      { "number": "300", "label": "Assistive devices and medical supplies distributed" },
-      { "number": "20+", "label": "Community awareness activities organized" },
-      { "number": "15", "label": "Partnerships with local and international institutions" },
-      { "number": "10", "label": "Homes modified for persons with disabilities" }
+      {
+        "number": "200+",
+        "label": "Families received food packages and clothing vouchers"
+      },
+      {
+        "number": "150",
+        "label": "Rehabilitation and educational sessions for children and youth"
+      },
+      {
+        "number": "300",
+        "label": "Assistive devices and medical supplies distributed"
+      },
+      {
+        "number": "20+",
+        "label": "Community awareness activities organized"
+      },
+      {
+        "number": "15",
+        "label": "Partnerships with local and international institutions"
+      },
+      {
+        "number": "10",
+        "label": "Homes modified for persons with disabilities"
+      }
     ],
     "future_title": "Future Plans",
     "future": [
@@ -182,20 +200,20 @@
     "title": "Donate & Support Our Mission",
     "subtitle": "Your donation changes a whole family's life",
     "impact_title": "Your Donation Impact",
-    "impact_1": "100 NIS provides an assistive device to a person in need",
-    "impact_2": "250 NIS funds 10 therapy sessions for a child",
-    "impact_3": "500 NIS provides a food package for a needy family for a full month",
+    "impact_1": "30$ provides an assistive device to a person in need",
+    "impact_2": "75$ provides a food package for a needy family for a full month",
+    "impact_3": "150$ funds 10 therapy sessions for a child with disabilities",
     "bank_title": "Bank Transfer Information",
-    "bank_name": "Bank of Palestine (BOP)",
+    "bank_name": "Palestine Investment Bank",
     "account_name": "Association of Special Needs Parents - Our Children",
     "account_number_label": "Account Number",
     "account_number": "220177",
     "iban_label": "IBAN",
-    "iban": "PS37PINV089802201770030038000",
+    "iban": "PS37PINV089802201770020038000",
     "swift_label": "SWIFT/BIC",
     "swift": "PINVPS22",
     "currency_label": "Currency",
-    "currency": "New Israeli Shekel (NIS)",
+    "currency": "Dollars (USD) ",
     "note": "Please include your name when transferring. We will contact you to confirm receipt."
   },
   "volunteer": {
