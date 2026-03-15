@@ -108,3 +108,7 @@ export async function getItemById(
   }, []);
   return results[0] || null;
 }
+
+export function getNews(locale: string) {
+  throw new Error('Function not implemented.');
+}
